@@ -1,0 +1,20 @@
+[package]
+name = "rocket_proxy"
+version = "0.1.0"
+authors = ["a.dammer <a.dammer@mytaxi.com>"]
+edition = "2018"
+
+[dependencies]
+rocket = "0.4"
+diesel = { version = "1.4", features = ["postgres"] }
+rand = "0.6"
+serde = "1"
+serde_derive = "1"
+
+[dependencies.rocket_contrib]
+version = "0.4"
+default-features = false
+features = ["json", "diesel_postgres_pool"]
+
+[profile.release]
+lto = true
