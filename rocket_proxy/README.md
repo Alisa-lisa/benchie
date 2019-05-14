@@ -1,4 +1,4 @@
-#Proxy service to query postgres
+# Proxy service to query postgres
 
 - Rocket
 - Diesel
