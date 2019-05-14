@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  postgres:
+    image: mdillon/postgis
+    container_name: "postgres"
+    hostname: "postgres"
+    restart: always
+    ports:
+      - "5432"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "pastdestinations"
+    networks:
+      - test_network
+
+  gate:
+    build: .
+    container_name: "gate"
+    hostname: "gate"
+    ports:
+      - 5002:5002
+    depends_on:
+      - postgres
+    networks:
+      - test_network
+
+networks:
+  test_network:
+    driver: bridge
+

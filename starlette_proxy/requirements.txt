@@ -1,0 +1,11 @@
+asyncio==3.4.3
+asyncpg==0.18.3
+Click==7.0
+h11==0.8.1
+httptools==0.0.11
+SQLAlchemy==1.2.16
+starlette==0.9.10
+uvicorn==0.3.25
+uvloop==0.11.3
+uWSGI==2.0.17.1
+websockets==7.0
