@@ -1,0 +1,18 @@
+[package]
+name = "proxy"
+version = "0.1.0"
+authors = ["a.dammer <a.dammer@mytaxi.com>"]
+edition = "2018"
+
+[dependencies]
+diesel = { version = "1.4", features = ["postgres"] }
+actix-web = "0.7"
+actix = "0.7"
+rand = "0.6"
+serde = "1"
+serde_derive = "1"
+futures = "0.1"
+
+
+[profile.release]
+lto = true
